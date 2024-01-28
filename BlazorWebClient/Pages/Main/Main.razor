@@ -1,0 +1,10 @@
+﻿@page "/"
+
+<h3>Main</h3>
+
+<EditForm Model="@ViewModel" OnSubmit="@OnTranslateSubmit">
+    <InputText @bind-Value="@ViewModel.SourceText" />
+    <button type="submit">Translate</button>
+</EditForm>
+
+<p>@ViewModel.TranslatedText</p>

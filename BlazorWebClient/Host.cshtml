@@ -1,0 +1,25 @@
+﻿@page "/"
+
+@using Microsoft.AspNetCore.Components.Web
+@using BlazorWebClient
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="~/WebApp.styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/shared.css" />
+    <base href="~/" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+
+<body>
+    <div class="content">
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
+    </div>
+
+    <script type="text/javascript" src="~/_framework/blazor.server.js"></script>
+</body>
+</html>
